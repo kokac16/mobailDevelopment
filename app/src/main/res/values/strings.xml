@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MobileDevelopmentCourseLabApp</string>
+    <string name="title_article">Статья</string>
+    <string name="title_second">Второй</string>
+    <string name="title_third">Третий</string>
+    <string name="infoTitle">Информация</string>
+    <string name="infoAge">Возраст</string>
+    <string name="positionTitle">Позиция</string>
+    <string name="teamTitle">Команда</string>
+</resources>

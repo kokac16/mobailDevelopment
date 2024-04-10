@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="@dimen/icon48"
+        android:layout_height="@dimen/icon48"
+        android:src="@drawable/baseline_man_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/icon"
+        app:layout_constraintBottom_toBottomOf="@+id/icon"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Иван Иванович Иванов"
+
+        />
+    
+    <ImageView
+        android:id="@+id/tShirt"
+        android:layout_width="@dimen/icon48"
+        android:layout_height="@dimen/icon48"
+        android:src="@drawable/t_shirt"
+        app:layout_constraintBottom_toBottomOf="@id/icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/tShirt"
+        app:layout_constraintTop_toTopOf="@+id/tShirt"
+        app:layout_constraintStart_toStartOf="@+id/tShirt"
+        app:layout_constraintEnd_toEndOf="@+id/tShirt"
+        tools:text="10"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@id/headerBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="icon, number, tShirt"
+
+        />
+
+    <TextView
+        android:id="@+id/infoTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/infoTitle"
+        app:layout_constraintTop_toBottomOf="@+id/headerBarrier"
+        />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleBarrier"
+        app:barrierDirection="end"
+        app:barrierMargin="8dp"
+        app:constraint_referenced_ids="ageTitle, positionTitle, teamTitle"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ageTitle"
+        android:text="@string/infoAge"
+        app:layout_constraintTop_toBottomOf="@+id/infoTitle"
+        android:layout_marginTop="8dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ageValue"
+        android:layout_marginTop="8dp"
+        tools:text="29 лет"
+        app:layout_constraintTop_toBottomOf="@+id/infoTitle"
+        app:layout_constraintStart_toStartOf="@+id/titleBarrier"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/positionTitle"
+        android:text="@string/positionTitle"
+        android:layout_marginTop="@dimen/offset_small"
+        app:layout_constraintTop_toBottomOf="@id/ageTitle"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/positionValue"
+        android:layout_marginTop="@dimen/offset_small"
+        tools:text="Центровой"
+        app:layout_constraintTop_toBottomOf="@id/ageTitle"
+        app:layout_constraintStart_toStartOf="@id/titleBarrier"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/teamTitle"
+        android:text="@string/teamTitle"
+        android:layout_marginTop="@dimen/offset_small"
+        app:layout_constraintTop_toBottomOf="@+id/positionTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/teamValue"
+        android:layout_marginTop="@dimen/offset_small"
+        tools:text="ЦCKA"
+        app:layout_constraintTop_toBottomOf="@id/positionTitle" app:layout_constraintStart_toStartOf="@id/titleBarrier"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
